@@ -6,19 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// Importar Component desde el núcleo de Angular
+// Importar el núcleo de Angular
 var core_1 = require("@angular/core");
 // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
 var AppComponent = (function () {
-    // Clase del componente donde irán los datos y funcionalidades
     function AppComponent() {
+        this.titulo = "Restaurantes";
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>Hola mundo con Angular 2 !!</h1>'
+            templateUrl: "app/view/home.html",
         })
-        // Clase del componente donde irán los datos y funcionalidades
+        // Clase del componente donde iran los datos y funcionalidades
     ], AppComponent);
     return AppComponent;
 }());

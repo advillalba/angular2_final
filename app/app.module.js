@@ -9,13 +9,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
+var http_1 = require("@angular/http");
+var forms_1 = require("@angular/forms");
+var app_routing_1 = require("./app.routing");
+var restaurantes_list_component_1 = require("./components/restaurantes-list.component");
+var restaurante_details_component_1 = require("./components/restaurante-details.component");
+var restaurante_add_component_1 = require("./components/restaurante-add.component");
+var restaurante_edit_component_1 = require("./components/restaurante-edit.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, app_routing_1.routing],
+            declarations: [app_component_1.AppComponent, restaurantes_list_component_1.RestaurantesListComponent,
+                restaurante_details_component_1.RestauranteDetailsComponent,
+                restaurante_add_component_1.RestauranteAddComponent,
+                restaurante_edit_component_1.RestauranteEditComponent
+            ],
+            providers: [app_routing_1.appRoutingProviders],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
